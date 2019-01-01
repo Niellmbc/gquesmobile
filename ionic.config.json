@@ -1,0 +1,8 @@
+{
+  "name": "gcques",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "876a1bf5"
+}

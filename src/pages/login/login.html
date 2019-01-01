@@ -1,0 +1,34 @@
+
+<ion-header>
+</ion-header>
+
+
+<ion-content padding class="mycontent">
+  
+    <ion-row no-padding>
+      <ion-col col-6 offset-3 class="login-logo" no-padding>
+        <img width="300px" src="../../assets/imgs/finallogo.png" no-margin no-padding>      
+        <!-- <img width="75px" height="75px" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c526.png">      -->
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col col-12>
+        <h1 text-center>Welcome to <br no-margin no-padding>GQUES</h1>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+        <ion-item>
+            <ion-label floating><ion-icon name="unlock"></ion-icon> Student No.</ion-label>
+            <ion-input type="text" [(ngModel)]="vstudnumber" style="color:white;"></ion-input>
+          </ion-item>
+      <ion-item>
+        <ion-label floating><ion-icon name="unlock"></ion-icon> Password</ion-label>
+        <ion-input type="password" [(ngModel)]="vpassword" style="color:white;"></ion-input>
+      </ion-item>
+    </ion-list>
+    
+    <div padding>
+      <button ion-button block (click)="loginAccount()">Sign In</button>
+    </div>
+  
+</ion-content>

@@ -1,0 +1,16 @@
+// .toolbar-background{
+//     background-image: linear-gradient(to right top, #009688, #077a85, #305d70, #39424f, #2d2d2d);
+// }
+// .toolbar-title{
+//     color:#fff;
+// }
+@import url('https://fonts.googleapis.com/css?family=Roboto|Montserrat');
+
+body {
+    cursor: url('../assets/imgs/finger.png'), auto;
+}
+
+.tabbar a[aria-selected=true] {
+    border-bottom: 2px solid #009688;
+}
+

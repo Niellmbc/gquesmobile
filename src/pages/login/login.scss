@@ -1,0 +1,38 @@
+page-login {
+    
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    ion-content{
+        // background-color: rgb(28, 163, 236) !important;
+        font-family: 'Roboto', sans-serif;
+        overflow: hidden;
+        //max-height: 100vh;
+    }
+    ion-item {
+        background: transparent !important;
+    }
+    ion-label{
+        color:white!important;
+    }
+    
+    h2,h1{
+        font-weight: 100;
+    }
+    
+    h1{
+        font-size: 28px;
+        color: white;
+    }
+    .mycontent{
+        background-image: url('../../assets/imgs/gcuesbg1.png');
+        height: 100%; 
+        background-attachment: fixed; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+        
+    }
+    
+}

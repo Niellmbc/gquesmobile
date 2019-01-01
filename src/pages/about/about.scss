@@ -1,0 +1,57 @@
+page-about {
+    .card{
+        text-align: center;
+        color:white;
+        background-color: #1ca3ec;
+        border-radius:15px;
+    }
+}
+
+.top {
+    height: 50%;
+    background: #1ca3ec;
+    opacity: .5;
+    line-height: 0px;
+}
+
+.card {
+    border-radius: 0px;
+}
+
+ion-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sa{
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.x{
+    margin:0 auto;
+    height: 20px;
+    width: 2.5px;
+    background: #488AFF;
+    position: relative;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif; 
+}
+
+h2{
+    font-weight: 200;
+}
+
+h5{
+    font-weight: 50;
+}
+
+h6{
+    font-weight: 200; 
+}
+
+.position{
+    color: grey;
+}
+
+
