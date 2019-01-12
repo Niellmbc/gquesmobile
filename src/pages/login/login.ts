@@ -35,6 +35,13 @@ export class LoginPage {
           buttons: ['OK']
         });
         alert.present();
+      }else if(res[0].fldRemarks=='Not Available'){
+        const alert = this.alertCtrl.create({
+          title: 'Invalid!',
+          subTitle: 'This Account is not Available',
+          buttons: ['OK']
+        });
+        alert.present();
       }else{
         if(this.vpassword==res[0].fldPassword){
          

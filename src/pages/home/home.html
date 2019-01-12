@@ -14,9 +14,10 @@
 </ion-header>
 
 <ion-content class="card-background-page">
-  <div *ngFor="let x of mytrans">
+  
+  <div *ngFor="let x of mytrans;">
     <ion-fab right bottom *ngIf="x.fldRemarks=='In Line'">
-      <button ion-fab mini  disabled><ion-icon name="add"></ion-icon></button>
+      <button ion-fab mini  hidden><ion-icon name="add"></ion-icon></button>
       <ion-fab-list side="left">
         <button ion-fab (click)="newtrans()"><ion-icon name="add"></ion-icon></button>
         <button ion-fab (click)="translist()"><ion-icon name="book"></ion-icon></button>
@@ -30,37 +31,67 @@
       </ion-fab-list> 
     </ion-fab>
     <ion-list *ngIf="x.fldRemarks=='In Line'">
-      <ion-item-divider color="light">Pending Transaction</ion-item-divider>
+      <ion-item-divider color="light">Pending Transaction in Finance Office</ion-item-divider>
       <ion-item-sliding>
         <ion-item>
-          
           <ion-avatar item-start>
             <img src="../../assets/imgs/finallogo.png">
           </ion-avatar>
-          <h2>#{{x.fldQueueNo}} - Cashier {{x.fldCashierNo}}</h2>
+          <h2># {{x.fldQueueNo}} - Cashier {{x.fldCashierNo}}</h2>
           <h2>Approx Time: {{x.fldArrival}}</h2>
         </ion-item>
         <ion-item-options side="right">
-          <button ion-button color="danger">
+          <button ion-button color="danger" (click)="leaveline()">
             <ion-icon name="close"></ion-icon>
             Leave Line
           </button>
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
-    <ion-list *ngIf="x==0"></ion-list>
-  </div>
+    </div>
 
-  <ion-card (click)="seeCashiers()" class="half-black">
-    <img src="../../assets/imgs/finallogo.png" class="bgimg"/>
-    <div class="card-title">Finance</div>
-  </ion-card>
+    <!-- <div *ngFor="let x of myregtrans">
+      <ion-fab right bottom *ngIf="x.fldRemarks=='In Line'">
+        <button ion-fab mini  hidden><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="left">
+          <button ion-fab (click)="newtrans()"><ion-icon name="add"></ion-icon></button>
+          <button ion-fab (click)="translist()"><ion-icon name="book"></ion-icon></button>
+        </ion-fab-list> 
+      </ion-fab>
+      <ion-fab right bottom *ngIf="x==0">
+        <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="left">
+          <button ion-fab (click)="newtrans()"><ion-icon name="add"></ion-icon></button>
+          <button ion-fab (click)="translist()"><ion-icon name="book"></ion-icon></button>
+        </ion-fab-list> 
+      </ion-fab>
+      <ion-list *ngIf="x.fldRemarks=='In Line'">
+        <ion-item-divider color="light">Pending Transaction in Registrar's Office</ion-item-divider>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/finallogo.png">
+            </ion-avatar>
+            <h2># {{x.fldQueueNo}} - {{x.fldType}}</h2>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="danger">
+              <ion-icon name="close"></ion-icon>
+              Leave Line
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+      </div> -->
+    
+    <ion-card (click)="seeCashiers()" class="half-black">
+      <img src="../../assets/imgs/finallogo.png" class="bgimg"/>
+      <div class="card-title">Finance</div>
+    </ion-card>
+    <ion-card (click)="seeRegistrar()" class="half-black">
+      <img src="../../assets/imgs/finallogo.png" class="bgimg"/>
+      <div class="card-title">Registrar</div>
+    </ion-card>
+    
+  </ion-content>
   
-  <ion-card (click)="seeRegistrar()" class="half-black">
-    <img src="../../assets/imgs/finallogo.png" class="bgimg"/>
-    <div class="card-title">Registrar</div>
-  </ion-card>
-  <button ion-button (click)="notify()">Push</button>
-  
-  
-</ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams,AlertController, Alert,App } from 'ionic-angular';
+import { NavController, NavParams,AlertController,App } from 'ionic-angular';
 
 import {DataProvider} from '../../providers/data/data';
 /**

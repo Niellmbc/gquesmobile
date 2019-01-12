@@ -21,6 +21,7 @@ import { InfoEachCashierPage } from '../pages/info-each-cashier/info-each-cashie
 import { TransactionListPage } from '../pages/transaction-list/transaction-list';
 import { PusherProvider } from '../providers/pusher/pusher';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -45,7 +46,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

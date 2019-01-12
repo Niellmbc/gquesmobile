@@ -3,13 +3,12 @@ import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 /*
   Generated class for the DataProvider provider.
-
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
 @Injectable()
 export class DataProvider {
-url = 'http://NIELLAMBACO/GQUESAPI';
+url = 'http://gordoncollegeccs-ssite.net/raniel/GQUESAPI';
 post:String;
   constructor(public http: Http) {
     console.log('Hello DataProvider Provider');
@@ -64,8 +63,15 @@ post:String;
   getmyTrans(studentID){
     return this.http.get(this.url+'/mytrans/'+studentID).map((res)=>res.json())
   }
+  getmyregTrans(studentID){
+    return this.http.get(this.url+'/myregtrans/'+studentID).map((res)=>res.json())
+  }
   getLastCashiersaTrans(){
     return this.http.get(this.url+'/tbl_transaction?ORDERBY=fldTransID%20DESC').map((res)=>res.json())
   }
+  send(){
+    return this.http.get('http://gordoncollegeccs-ssite.net/raniel/GQUESAPI/pusher.php').map(res=>res.json());
+  }
+
 
 }
